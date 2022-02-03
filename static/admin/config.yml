@@ -17,7 +17,7 @@ locale: "en"
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/pages/blog"
+    folder: "src/pages/en/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -38,7 +38,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/index.md"
+      - file: "src/pages/en/index.md"
         label: "Landing Page"
         name: "index"
         fields:
@@ -123,7 +123,7 @@ collections:
                   },
                 ],
             }
-      - file: "src/pages/about/index.md"
+      - file: "src/pages/en/about/index.md"
         label: "About"
         name: "about"
         fields:
