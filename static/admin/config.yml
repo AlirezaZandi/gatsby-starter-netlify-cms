@@ -34,7 +34,6 @@ collections:
       - { label: "Featured Image", name: "featuredimage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-
   - name: "pagesEn"
     label: "Pages"
     files:
@@ -246,9 +245,7 @@ collections:
                   },
                 ],
             }
-
-    #FA
-    - name: "blog-fa"
+  - name: "blogfa"
     label: "Blog"
     folder: "src/pages/fa/blog"
     create: true
@@ -268,7 +265,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
-  - name: "pages-fa"
+  - name: "pagesfa"
     label: "Pages"
     files:
       - file: "src/pages/fa/index.md"
@@ -318,7 +315,7 @@ collections:
             }
           - {
               label: Main,
-              name: main-fa,
+              name: mainfa,
               widget: object,
               fields:
                 [
@@ -358,7 +355,7 @@ collections:
             }
       - file: "src/pages/fa/about/index.md"
         label: "About"
-        name: "about-fa"
+        name: "aboutfa"
         fields:
           - {
               label: "Template Key",
@@ -370,7 +367,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
       - file: "src/pages/fa/products/index.md"
         label: "Products Page"
-        name: "products-fa"
+        name: "productsfa"
         fields:
           - {
               label: "Template Key",
@@ -404,7 +401,7 @@ collections:
             }
           - {
               label: Main,
-              name: main,
+              name: mainfa,
               widget: object,
               fields:
                 [
