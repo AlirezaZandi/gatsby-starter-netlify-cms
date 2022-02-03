@@ -6,20 +6,20 @@ import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix, navigate } from "gatsby";
 
-const TemplateWrapper = ({ children, location }) => {
+const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   const [language, setLanguage] = React.useState(() => {
     return localStorage.getItem("lang") || "fa";
   });
   React.useEffect(() => {
+    console.log(window.location.pathname);
+    if (window.location.pathname === "/") navigate("/" + language);
+  }, []);
+  React.useEffect(() => {
     let newPath = window.location.pathname.toString().replace("en", language);
     newPath = newPath.toString().replace("fa", language);
     localStorage.setItem("lang", language);
-
     navigate(newPath);
-
-    //window.location.reload();
-    // localStorage.setItem("lang", language);
   }, [language]);
   return (
     <div>
