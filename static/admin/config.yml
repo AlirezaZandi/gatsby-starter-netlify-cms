@@ -12,6 +12,8 @@ local_backend: true
 media_folder: static/img
 public_folder: /img
 
+locale: "de"
+
 collections:
   - name: "blog"
     label: "Blog"
