@@ -12,7 +12,7 @@ local_backend: true
 media_folder: static/img
 public_folder: /img
 
-locale: "fa"
+locale: "de"
 
 collections:
   - name: "blog"

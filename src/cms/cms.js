@@ -7,7 +7,7 @@ import BlogPostPreview from "./preview-templates/BlogPostPreview";
 import ProductPagePreview from "./preview-templates/ProductPagePreview";
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
 
-import { fa } from "netlify-cms-locales";
+import { de } from "netlify-cms-locales";
 
 CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
@@ -17,4 +17,4 @@ CMS.registerPreviewTemplate("about", AboutPagePreview);
 CMS.registerPreviewTemplate("products", ProductPagePreview);
 CMS.registerPreviewTemplate("blog", BlogPostPreview);
 
-CMS.registerLocale("fa", fa);
+CMS.registerLocale("de", de);
