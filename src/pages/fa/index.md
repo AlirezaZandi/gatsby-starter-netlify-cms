@@ -5,10 +5,10 @@ image: /img/flavor_wheel.jpg
 heading: Great coffee with a conscience
 subheading: Support sustainable farming while enjoying a cup
 mainpitch:
-  title: یی
+  title: چییشسیشسیشی
   description: >
-    یسشیشیشسیشیشسیشس
-description:
+    سیشسیشسیشسیشسیشییییییییسسسسس
+description: فارسی
 intro:
   blurbs:
     - image: /img/coffee.png

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import github from "../img/github-icon.svg";
 import logo from "../img/logo.svg";
 
@@ -37,8 +37,7 @@ const Navbar = class extends React.Component {
       <nav
         className="navbar is-transparent"
         role="navigation"
-        aria-label="main-navigation"
-      >
+        aria-label="main-navigation">
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
@@ -51,8 +50,7 @@ const Navbar = class extends React.Component {
               role="menuitem"
               tabIndex={0}
               onKeyPress={() => this.toggleHamburger()}
-              onClick={() => this.toggleHamburger()}
-            >
+              onClick={() => this.toggleHamburger()}>
               <span />
               <span />
               <span />
@@ -60,8 +58,7 @@ const Navbar = class extends React.Component {
           </div>
           <div
             id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
+            className={`navbar-menu ${this.state.navBarActiveClass}`}>
             <div className="navbar-start has-text-centered">
               <Link className="navbar-item" to="/about">
                 About
@@ -84,12 +81,19 @@ const Navbar = class extends React.Component {
                 className="navbar-item"
                 href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <span className="icon">
                   <img src={github} alt="Github" />
                 </span>
               </a>
+              <button
+                onClick={() =>
+                  this.props.setLanguage((p) =>
+                    p === "en" ? (p = "fa") : (p = "en")
+                  )
+                }>
+                {this.props.language}
+              </button>
             </div>
           </div>
         </div>

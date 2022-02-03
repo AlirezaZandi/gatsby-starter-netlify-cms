@@ -4,10 +4,23 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "./all.sass";
 import useSiteMetadata from "./SiteMetadata";
-import { withPrefix } from "gatsby";
+import { withPrefix, navigate } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, location }) => {
   const { title, description } = useSiteMetadata();
+  const [language, setLanguage] = React.useState(() => {
+    return localStorage.getItem("lang") || "fa";
+  });
+  React.useEffect(() => {
+    let newPath = window.location.pathname.toString().replace("en", language);
+    newPath = newPath.toString().replace("fa", language);
+    localStorage.setItem("lang", language);
+
+    navigate(newPath);
+
+    //window.location.reload();
+    // localStorage.setItem("lang", language);
+  }, [language]);
   return (
     <div>
       <Helmet>
@@ -48,7 +61,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+      <Navbar language={language} setLanguage={setLanguage} />
       <div>{children}</div>
       <Footer />
     </div>
