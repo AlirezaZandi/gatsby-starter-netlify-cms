@@ -15,7 +15,7 @@ public_folder: /img
 locale: "en"
 
 collections:
-  - name: "blog"
+  - name: "blogEn"
     label: "Blog"
     folder: "src/pages/en/blog"
     create: true
@@ -35,7 +35,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
 
-  - name: "pages"
+  - name: "pagesEn"
     label: "Pages"
     files:
       - file: "src/pages/en/index.md"
@@ -125,7 +125,7 @@ collections:
             }
       - file: "src/pages/en/about/index.md"
         label: "About"
-        name: "about"
+        name: "aboutEn"
         fields:
           - {
               label: "Template Key",
